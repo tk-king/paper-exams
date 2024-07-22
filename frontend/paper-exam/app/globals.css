@@ -1,3 +1,12 @@
 .body {
   height: 100vh;
 }
+
+.button-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.input-primary {
+  
+}
