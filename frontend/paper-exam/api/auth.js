@@ -14,8 +14,12 @@ const getUser = async () => {
     return res;
 }
 
+const logout = () => {
+    window.location.href = `http://localhost:4445/auth/logout`;
+}
 
 module.exports = {
     loginOAuth,
-    getUser
+    getUser,
+    logout
 }
