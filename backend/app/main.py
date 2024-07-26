@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from router.auth import router as auth_router
+from router.courses import router as courses_router
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -18,6 +19,7 @@ app.add_middleware(
         )
 
 app.include_router(auth_router, prefix="/auth", tags=["auth"])
+app.include_router(courses_router, prefix="/courses", tags=["courses"])
 
 
 if __name__ == "__main__":
