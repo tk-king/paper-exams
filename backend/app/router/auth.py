@@ -33,7 +33,7 @@ async def token_github(request: Request):
 @router.get("/logout")
 async def logout(response: Response):
     response.delete_cookie("token")
-    return {"message": "Logout"}
+    return RedirectResponse(config["APP_URL"] + "/login", status_code=status.HTTP_307_TEMPORARY_REDIRECT)
 
 @router.get("/user")
 async def get_user(user: dict = Depends(verify_token)):

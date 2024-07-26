@@ -7,6 +7,7 @@
   color: white;
 }
 
-.input-primary {
-  
+.MuiOutlinedInput-input {
+  background-color: blue;
+  color: red;
 }

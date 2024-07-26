@@ -24,7 +24,8 @@ const useAuth = () => {
     }
 
     return {
-        loginOAuth
+        loginOAuth,
+        user
     }
 }
 
