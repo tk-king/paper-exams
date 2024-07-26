@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import useCourse from '@/hooks/useCourse';
 import { Tabs, Tab, Box } from '@mui/material';
 import { useParams } from 'next/navigation';
+import QuestionPage from '@/app/components/QuestionPage';
+
 
 const Page = () => {
   const { courseId } = useParams();
@@ -28,8 +30,7 @@ const Page = () => {
         </Tabs>
         {value === 0 && (
           <Box sx={{ p: 3 }}>
-            <h2>Questions Content</h2>
-            {/* You can add content related to Questions here */}
+            <QuestionPage></QuestionPage>
           </Box>
         )}
         {value === 1 && (
