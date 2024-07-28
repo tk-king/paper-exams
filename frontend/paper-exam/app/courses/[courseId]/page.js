@@ -24,7 +24,7 @@ const Page = () => {
     <div>
       <h1>Course: {course.name}</h1>
       <Box sx={{ width: '100%' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="course tabs">
+        <Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="course tabs">
           <Tab label="Questions" />
           <Tab label="Exams" />
         </Tabs>

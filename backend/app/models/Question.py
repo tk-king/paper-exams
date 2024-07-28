@@ -1,15 +1,16 @@
-from pydantic import BaseModel
-
-class ExamSection(BaseModel):
-    heading: str
+from pydantic import BaseModel, Field
+from utils.pyobjectId import PyObjectId
 
 
-class QuestionModel(BaseModel):
-    heading: str
-
-
-class SubTextQuetsionModel(BaseModel):
+class SubTextQuestionModel(BaseModel):
+    id : PyObjectId = Field(default_factory=PyObjectId, alias="_id")
+    name: str
     question: str
     answer: str
-    answer_lines: str
     points: int
+    difficulty: int
+    type: str = "text"
+    
+
+
+QuestionModel = SubTextQuestionModel
